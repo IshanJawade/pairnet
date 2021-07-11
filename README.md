@@ -1,4 +1,4 @@
 # PAIRNET
 ## Deep learning solution for  medical image
 
-![](/Screenshots/img1.jpg)
+![](/Screenshots/img1.png)
