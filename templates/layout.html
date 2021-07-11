@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f9e4917ecf.js" crossorigin="anonymous"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <!-- <link href="{{ url_for('static', filename='img/') }}" rel="stylesheet"> -->
+
+  </head>
+  <body>
+    <section class="fheader">    
+        <header class="text-gray-700 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+                <a href="/team" class="font-bold mr-5 hover:text-orange-900 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><i class="fas fa-users"></i>  OUR TEAM</a>
+                <a href="/about" class="font-bold mr-5 hover:text-orange-900 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"><i class="fas fa-code"></i>  ABOUT</a>
+              </nav>
+              <a href="/" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-orange-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-5xl">PairNet</span>
+              </a>
+              <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+  
+              </div>
+            </div>
+          </header>
+  </section>
+
+    <div class="container-fluid">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <footer class="text-gray-700 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-orange-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">PairNet</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">Final Year Project
+            <a href="/" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@MITSOE, Pune</a>
+          </p>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 ">&nbsp;&nbsp;&nbsp;Guided By:
+            <a href="/" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Dr. Nilima Kulkarni</a>
+          </p>
+        </div>
+      </footer>
+  </body>
+</html>

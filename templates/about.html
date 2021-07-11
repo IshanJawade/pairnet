@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container px-5 py-24 mx-auto">
+    <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">Abstract</h1>
+    <p class="mb-8 leading-relaxed">&#8226; Ship detection from remote sensing imagery is a crucial application for maritime security.<br>
+
+        &#8226; When talking about maritime security, we have to consider many things like traffic surveillance, protection against illegal fisheries, oil discharge control and sea pollution monitoring.<br> 
+            
+        &#8226; Automated Identification System (AIS) are very effective at monitoring ships which are legally required to install a VHF transponder, but fail to detect those which are not, and those which disconnect their transponder.<br>  
+            
+        &#8226; So how do you detect these uncooperative ships?<br>  
+            
+        &#8226; Synthetic Aperture Radar (SAR)<br>
+    </p>
+    <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">Procedure</h1>
+    <p class="mb-8 leading-relaxed">&#8226; We first defined 5 classes namely, small_ship_moving, small_ship_not_moving, medium_ship_moving, medium_ship_not_moving and large_ship<br>
+            &#8226; For labeling we used the LabelImg tool for creating .txt files for the YOLOv3 mode. We used the VGG Image Annotator tool for creating .json files and masks for the Mask RCNN model.<br>
+            &#8226; For the different classes, we had to edit some more files file, object.data and object.data for the YOLO v3 model. We also had to make changes to its .config file to increase the number of iterations so as to make the model more accurate.<br>
+            &#8226; After the prerequisites, we were ready to train our models.<br>
+            &#8226; We used the pretrained weights like COCO for helping train our models.<br>
+            &#8226; After the model was trained, we saved the new weights and then tested with new images of ship, to check the accuracy of our model.<br>
+            
+    </p>
+    <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">Technology Stack</h1>
+    <p class="mb-8 leading-relaxed">
+        &#8226; Darknet-53 Architecture<br>
+        &#8226; YOLOv4<br>
+        &#8226; ResNet-101<br>
+        &#8226; MASK-RCNN<br>
+        &#8226; LabelImg<br>
+        &#8226; VGG Image Annotator <br>
+        &#8226; Kaggle<br>
+        &#8226; OpenCV<br>
+        &#8226; FLASK <br>
+    </p>
+    <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">SourceCode</h1>
+    <!-- <a href="http://127.0.0.1:5000/api/v1/"><input class="inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg transition duration-500 ease-in-out bg-teal-600 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110" type = "button" name = "MASK-RCNN" value="MASK-RCNN"/></a> -->
+    <p class="mb-8 leading-relaxed text-blue ">
+        &#8226; Github Repository: <a class="bg-yellow-400" href="https://github.com/pandykad/Size-Invariant-Ship-detection-from-SAR-Images.git">Click Here !</a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br>
+<p class="text-center text-lg">{{ fname }} successfully uploaded.</p>
+<!-- <div class="row">
+    <div class="col-md-5">
+        <div class="image-container">
+            <p class="text-center"><b>Original Image</b></p>     
+            <a href="/static/uploads/{{ fname }}" target="_new"><img src="/static/uploads/{{ fname }}" class="upload-image-thumb"></a>
+        </div>
+        <div class="upload-form">
+            <p class="text-left">Upload another?</p>
+            <form action = "/uploader" method = "POST" 
+                              enctype = "multipart/form-data">
+                <input type = "file" name = "file" />
+                <input type = "submit"/>
+            </form>
+        </div>      
+    </div>
+ </div>
+</br>
+
+<div class="row">
+    <div class="col-md-5"> 
+    <div class="image-container">
+        <p class="text-center"><b>Detected Image</b></p>
+        <a href="/static/detections/{{display_detection}}" target="_new"><img src="/static/detections/{{display_detection}}" class="upload-image-thumb"></a> 
+    </div>
+</div>
+
+</div> -->
+
+<section class="text-gray-700 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="/static/detections/{{display_detection}}">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Detected Region of Interest
+              
+            </h1>
+            <p class="mb-8 leading-relaxed">Alongside image show's bounding box around the detected ROI, with the confidence score given above.</p>
+            <div class="flex justify-center">
+             <a href="http://127.0.0.1:5000/"><button  class="inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg transition duration-500 ease-in-out bg-red-500 hover:bg-orange-500 transform hover:-translate-y-1 hover:scale-110">Next Step</button></a>
+            </div>
+          </div>
+        </div>
+    
+</section>
+
+{% endblock %} 
+
